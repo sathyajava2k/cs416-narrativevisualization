@@ -1,0 +1,87 @@
+<html>
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Police Residence</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Do Police Live In the Cities Where They Serve ?</h1>
+        <div style="font-size:14px;text-align:left;padding-left: 530px; padding-bottom:5px;">
+			<b>Source:&nbsp;&nbsp;</b><a target="_blank" rel="noopener noreferrer" href="https://github.com/fivethirtyeight/data/tree/master/police-locals">https://github.com/fivethirtyeight/data/tree/master/police-locals</a><br/>
+        </div>
+        <div style="font-size:14px;text-align:left; padding-left: 530px;">
+			<b>Article:&nbsp;&nbsp;&nbsp;</b><a target="_blank" rel="noopener noreferrer" href="https://fivethirtyeight.com/features/most-police-dont-live-in-the-cities-they-serve/">https://fivethirtyeight.com/features/most-police-dont-live-in-the-cities-they-serve/</a>
+        </div>
+        <div class="scenes" id="scene-1" style="float:left; width:1200px; padding-top:50px;">
+			<div style="padding-left:360px; padding-bottom: 10px; text-align:left; font-weight: bold; font-size: 16px;">Police Officers Count</div>
+			<div style="float:left; width:80%;">
+				<div id="bar-chart"></div>
+			</div>
+			<div style="float:left; width:20%; padding-top: 65px; text-align: left; font-size: 14px; ">
+				The horizantal bar chart displays the number of police officers among the cities with 75 largest police forces.The data collected between 2006 and 2010.
+				<br/>
+				<br/>
+				New york has the maximum police forces in the country with 32300 police officers.
+				
+				<br/>
+				<br/>
+				This is followed by Chicago, Los Angeles and so on. San Bernardino, California has least of 755 police officers.
+			</div>
+        </div>
+		
+		<div class="scenes" id="scene-2" style="display: none; float:left; width:1200; padding-top:50px;">
+            <div style="padding-left:360px; padding-bottom: 20px; text-align:left; font-weight: bold; font-size: 16px;">Police Locals vs Non-Locals</div>
+			<div style="float:left; width:80%;">
+				<div>
+					<label for="cities3">Select a city:</label>
+					<select id="cities3">
+					</select>
+				</div>
+            <div id="bar"></div>
+			</div>
+			<div style="float:left; width:20%; padding-top: 65px; text-align: left; font-size: 14px; ">
+				The bar chart compares percentages of police officers living in the city vs police officers not living in the city.
+				<br/>
+				<br/>
+				Hovering over Locals and Non-Locals bar provides the information on the percentages.
+				<br/>
+				<br/>
+				Cities can be changed from the dropdown.
+				</div>
+        </div>
+
+		<div class="scenes" id="scene-3" style="display: none; float:left; width:1200; padding-top:50px;">
+			<div style="padding-left:360px; padding-bottom: 20px; text-align:left; font-weight: bold; font-size: 16px;">Police Locals By Race</div>
+			<div style="float:left; width:80%;">
+				<div>
+					<label for="cities2">Select a city:</label>
+					<select id="cities2">
+					</select>
+				</div>
+				<div id="pie-chart-legends" style="padding-top:40px;"></div>
+				<svg width="900" height="500" id="pie-chart">
+				</svg>
+			</div>
+			<div style="float:left; width:20%; padding-top: 65px; text-align: left; font-size: 14px; ">
+				The Pie chart compares percentages of police officers by Race living in the city.
+				<br/>
+				<br/>
+				For example, in New york only 44.64% of Whites are living in the city, vs 77.09% of Blacks living in the city.
+				<br/>
+				<br/>
+				Cities can be changed from the dropdown.
+			</div>           
+        </div>
+
+		<div class="nav" style="float:left; padding-left:30px;">
+            <button id="back" onclick="change_scene(-1)" disabled=true>Previous</button>
+        </div>
+        <div class="nav right" style="float:left;">
+            <button id="next" onclick="change_scene(1)" disabled=true>Next</button>
+        </div>		
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

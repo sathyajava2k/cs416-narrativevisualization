@@ -1,0 +1,71 @@
+body {
+    font: 12px sans-serif;
+}
+
+div.scenes {
+    padding-top: 15px;
+}
+
+div.container {
+    padding: 10px;
+	width:1600px;
+	margin-left: 100px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+	font-weight: normal;
+}
+
+label {
+    font-size: 13px;
+}
+
+div.nav {
+    padding-top: 50px;
+	padding-right: 10px;
+}
+
+div.right {
+    right: 20px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #115f9a;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #115f9a;
+  color: white;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.annotation-note-title, text.title {
+    font-weight: bold;
+	font-size: 14px;
+	font-weight: 400;
+}
+
